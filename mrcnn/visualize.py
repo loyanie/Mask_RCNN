@@ -312,6 +312,8 @@ def plot_precision_recall(AP, precisions, recalls):
     # Plot the Precision-Recall curve
     _, ax = plt.subplots(1)
     ax.set_title("Precision-Recall Curve. AP@50 = {:.3f}".format(AP))
+    ax.set_xlabel("Recall")
+    ax.set_ylabel("Precision")
     ax.set_ylim(0, 1.1)
     ax.set_xlim(0, 1.1)
     _ = ax.plot(recalls, precisions)
